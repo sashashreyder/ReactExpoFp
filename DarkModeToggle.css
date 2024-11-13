@@ -1,0 +1,294 @@
+/* DarkModeToggle.css */
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 70px; /* Adjust as necessary to be below the navbar */
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #208ae0;
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+.toggle-text {
+    font-size: 1.2rem;
+    margin-left: 8px;
+    color: #555; /* Color for the icon */
+}
+
+/* Basic transitions for smoother color change */
+body, .navbar, .hero-section, .content, h1, h2, p, button, 
+.features-section, .feature-card, .feature-card h3, .feature-card p, 
+.statistics-container, .stat-number, .stat-item p, .pricing-card,
+.contact-form-container, .submit-button, .contact-title{
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* General Dark Mode for Body */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Navbar in Dark Mode */
+body.dark-mode .navbar {
+    background-color: #22224a !important;
+    color: #a2a2a2 !important;
+}
+
+body.dark-mode .navbar .navbar-brand,
+body.dark-mode .navbar .nav-link {
+    color: #ffffff !important;
+}
+
+/* Hero Section Dark Mode */
+body.dark-mode .hero-section {
+    background-color: #121212; 
+}
+
+body.dark-mode .hero-section .background-video {
+    opacity: 0.7; 
+}
+
+/* Buttons in Dark Mode */
+body.dark-mode .button, 
+body.dark-mode button {
+    background-color: #42414b;
+    color: #ffffff;
+    border: none;
+}
+
+body.dark-mode .button:hover, 
+body.dark-mode button:hover {
+    background-color: #555;
+}
+
+body.dark-mode .content {
+    color: #ffffff;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+
+/* Features */
+
+body.dark-mode .features-section {
+    background: linear-gradient(13deg, #232333, #303c57);
+    color: #ffffff;
+}
+
+body.dark-mode .feature-card {
+    border: none;
+    background-color: #1e3a5f;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .feature-card:hover {
+    background-color: #274a73; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .feature-card h3 {
+    font-size: 1.25rem;
+    color: #cbcbcb;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .feature-card p {
+    font-size: 1rem;
+    color: #b2abab;
+}
+
+/* Stats Dark Mode */
+
+body.dark-mode .statistics-container {
+    background: linear-gradient(13deg, #232333, #303c57);
+}
+
+body.dark-mode  .stat-number {
+    color: rgb(200, 200, 200);
+} 
+
+body.dark-mode .stat-item p {
+    color: #bdbdbd; 
+  }
+
+
+ /* Pricing */
+
+.dark-mode .featured {
+    background: linear-gradient(135deg, #333333, #8c7000);
+    color: #ffffff;
+    transform: scale(1.05);
+    border: 1px solid #8c7000;
+  }
+  
+  .dark-mode .featured .price {
+    color: #ffdd44; /* Gold accent for price */
+  }
+  
+  .dark-mode .info-btn {
+    background-color: transparent;
+    border: 1px solid #ffdd44;
+    color: #ffdd44;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dark-mode .info-btn:hover {
+    background-color: #ffdd44;
+    color: #333333;
+  }
+  
+  .dark-mode .pricing-card {
+    background: linear-gradient(13deg, #232333, #303c57);
+  }
+  
+  .dark-mode .more-info {
+    color: #dddddd;
+  }
+
+  .dark-mode .features-list {
+    color: whitesmoke;
+  }
+  
+  /*Contact Form */
+  .dark-mode .contact-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #1c1c1e, #2c2c2e); /* Dark gradient background */
+    padding: 1rem;
+    color: #f0f0f0; /* Light text color */
+}
+
+.dark-mode .contact-form-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #2d2d2f; /* Darker background for form container */
+    border-radius: 8px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    gap: 1.5rem;
+    align-items: center;
+    color: #e0e0e0;
+}
+
+.dark-mode .contact-form-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dark-mode .contact-form-content h2 {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.dark-mode .contact-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    background-color: #3b3b3d; /* Darker input background */
+    color: #f5f5f5;
+    border: 1px solid #4f4f52; /* Softer border */
+    transition: border-color 0.3s ease;
+}
+
+.dark-mode .contact-input::placeholder {
+    color: #a6a6a6;
+}
+
+.dark-mode .contact-input:focus {
+    outline: none;
+    border-color: #7777ff; /* Accent border color on focus */
+}
+
+.dark-mode .contact-submit {
+    padding: 0.8rem 1.5rem;
+    background-color: #3d3dbf; /* Button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dark-mode .contact-submit:hover {
+    background-color: #2a2a9d;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+
+/* Footer Dark Mode */
+.dark-mode .footer {
+    background-color: #1c1c1e;
+    color: #e0e0e0;
+}
+
+.dark-mode .footer-link {
+    color: #a8c0ff;
+}
+
+.dark-mode .footer-link:hover {
+    color: #7691e1;
+}
+
+.dark-mode .footer-text {
+    color: #999;
+}
+

@@ -1,0 +1,25 @@
+.navbar {
+    background-color: transparent !important; 
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    
+}
+
+.navbar.scrolled {
+    background-color: #5c8fc2; 
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #d0cece;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover {
+    color: #a5a8ab; 
+}

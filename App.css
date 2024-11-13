@@ -1,0 +1,7 @@
+body, html {
+    background-color: rgb(19, 12, 70);
+}
+
+html {
+    scroll-behavior: smooth;
+}
